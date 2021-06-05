@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PageController;
 
@@ -18,4 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', [PageController::class, 'index']);
+// page controller
+Route::get('/dashboard', [PageController::class, 'index']);
+
+// category controller
+Route::get('/category', [CategoryController::class, 'index'])->name('category');
+Route::get('/category/add', [CategoryController::class, 'add'])->name('category.add');

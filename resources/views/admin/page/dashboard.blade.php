@@ -12,7 +12,12 @@
       <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <div class="container">
-                Ini cova
+                DASBOARD ADMIN
             </div>
         </div>
+
+@endsection
+
+@section('scripts')
+
 @endsection
