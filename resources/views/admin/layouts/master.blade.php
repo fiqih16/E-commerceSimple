@@ -7,10 +7,11 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Scripts -->
-{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+<script src="{{ asset('js/app.js') }}" defer></script>
 {{-- styles --}}
 <link rel="stylesheet" href="{{ asset('css/app.css')}}">
 {{-- @livewireStyles --}}
+<livewire:styles />
 {{-- asset css --}}
   @include('admin.layouts._asset_header')
 
@@ -31,5 +32,6 @@
 {{-- asset script --}}
 @include('admin.layouts._asset_footer')
 {{-- @livewireScripts --}}
+<livewire:scripts />
 </body>
 </html>

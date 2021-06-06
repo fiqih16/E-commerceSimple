@@ -48,7 +48,7 @@
                             </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                            @livewire('admin.category.index')
+                            @livewire('admin.category.create')
                         </div>
                         <!-- /.card -->
                     </div>
