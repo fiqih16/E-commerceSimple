@@ -6,8 +6,14 @@
   <title>@yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{-- asset css --}}
+<!-- Scripts -->
+{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+{{-- styles --}}
+<link rel="stylesheet" href="{{ asset('css/app.css')}}">
+{{-- @livewireStyles --}}
+{{-- asset css --}}
   @include('admin.layouts._asset_header')
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -24,6 +30,6 @@
 
 {{-- asset script --}}
 @include('admin.layouts._asset_footer')
-
+{{-- @livewireScripts --}}
 </body>
 </html>

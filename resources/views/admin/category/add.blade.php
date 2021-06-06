@@ -5,7 +5,8 @@
 @endsection
 
 @section('css')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/css/fileinput.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/css/fileinput.min.css" media="all" type="text/css"/>
 <style>
     .file-input {
         width: 100%;
@@ -46,30 +47,8 @@
                                 <h3 class="card-title">Add Category</h3>
                             </div>
                         <!-- /.card-header -->
-                <!-- form start -->
-                            <form role="form">
-                                <div class="card-body">
-                                    <h4>Nama Category</h4>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">@</span>
-                                        </div>
-                                        <input type="email" class="form-control" placeholder="Nama Category">
-                                    </div>
-
-                                    <h4>Banner</h4>
-                                    <div class="input-group mb-3">
-                                        <input type="file" class="form-control file" multiple data-max-file-count="1" placeholder="Email">
-                                        {{-- Multiple = Upload lebih dari satu gambar --}}
-                                        {{-- data-max-file-count = Jumlah maksimal gambar yg akan di upload --}}
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                </div>
-
-                            </form>
+                        <!-- form start -->
+                            @livewire('admin.category.index')
                         </div>
                         <!-- /.card -->
                     </div>
@@ -82,6 +61,13 @@
 @endsection
 
 @section('scripts')
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/js/fileinput.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/themes/fa/theme.js"></script>
+<script>
+    $("#input-fa").fileinput({
+        theme:"fa",
+        uploadUrl: "/file-upload-batch/2"
+    });
+</script>
 @endsection

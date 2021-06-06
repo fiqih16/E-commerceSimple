@@ -25,3 +25,6 @@ Route::get('/dashboard', [PageController::class, 'index']);
 // category controller
 Route::get('/category', [CategoryController::class, 'index'])->name('category');
 Route::get('/category/add', [CategoryController::class, 'add'])->name('category.add');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
